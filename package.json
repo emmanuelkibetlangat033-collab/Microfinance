@@ -1,0 +1,44 @@
+{
+  "name": "microfinance-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "eslint",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:studio": "prisma studio",
+    "db:setup": "prisma generate && prisma db push && tsx prisma/seed.ts",
+    "mpesa:credential": "node scripts/generate-b2c-security-credential.mjs"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.0.0",
+    "bcryptjs": "^2.4.3",
+    "date-fns": "^4.1.0",
+    "next": "16.3.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "uuid": "^11.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/uuid": "^10.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.8",
+    "prisma": "^6.0.0",
+    "tailwindcss": "^4",
+    "tsx": "^4.19.0",
+    "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+}
